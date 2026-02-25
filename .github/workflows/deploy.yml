@@ -1,0 +1,49 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-com:
+    name: Deploy <inaugustbook.com>
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to <inaugustbook.com> via LFTP
+        env:
+          FTP_USERNAME: ${{ secrets.FTP_USERNAME_COM }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD_COM }}
+        run: |
+          sudo apt-get install -y lftp
+          lftp -u "$FTP_USERNAME","$FTP_PASSWORD" 194.213.127.95 <<EOF
+          set ftp:ssl-force true
+          set ftp:ssl-protect-data true
+          set ssl:verify-certificate false
+          set dns:order "inet"
+          mirror -R --delete --parallel=5 . /httpdocs/
+          bye
+          EOF
+
+  deploy-nl:
+    name: Deploy <inaugust.nl>
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Deploy to <inaugust.nl> via LFTP
+        env:
+          FTP_USERNAME_NL: ${{ secrets.FTP_USERNAME_NL }}
+          FTP_PASSWORD_NL: ${{ secrets.FTP_PASSWORD_NL }}
+        run: |
+          sudo apt-get install -y lftp
+          lftp -u "$FTP_USERNAME_NL","$FTP_PASSWORD_NL" 194.213.127.95 <<EOF
+          set ftp:ssl-force true
+          set ftp:ssl-protect-data true
+          set ssl:verify-certificate false
+          set dns:order "inet"
+          mirror -R --delete --parallel=5 nl/ /httpdocs/
+          bye
+          EOF
