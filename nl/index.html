@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>In August</title>
+  <link rel="preconnect" href="<https://fonts.googleapis.com>" />
+  <link rel="preconnect" href="<https://fonts.gstatic.com>" crossorigin />
+  <link href="<https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&display=swap>" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+    }
+
+    body {
+      background: radial-gradient(ellipse at 50% 0%, #1a1b2e 0%, #0e0f1c 45%, #090a0f 100%);
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', 'Cormorant', Georgia, serif;
+    }
+
+    h1 {
+      position: absolute;
+      top: 28%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(2.8rem, 7vw, 6rem);
+      color: #f0e8ff;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      text-align: center;
+      user-select: none;
+    }
+
+    .scene {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>In August</h1>
+
+  <svg class="scene" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" xmlns="<http://www.w3.org/2000/svg>" aria-hidden="true">
+    <defs>
+      <!-- Horizon glow -->
+      <radialGradient id="horizonGlow" cx="50%" cy="0%" r="60%" gradientUnits="userSpaceOnUse" fx="720" fy="520">
+        <stop offset="0%" stop-color="#2a1f4a" stop-opacity="0.55" />
+        <stop offset="100%" stop-color="#090a0f" stop-opacity="0" />
+      </radialGradient>
+
+      <!-- Mist gradient -->
+      <linearGradient id="mistGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%"   stop-color="#12172a" stop-opacity="0" />
+        <stop offset="20%"  stop-color="#12172a" stop-opacity="0.55" />
+        <stop offset="50%"  stop-color="#12172a" stop-opacity="0.7" />
+        <stop offset="80%"  stop-color="#12172a" stop-opacity="0.55" />
+        <stop offset="100%" stop-color="#12172a" stop-opacity="0" />
+      </linearGradient>
+      <linearGradient id="mistGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%"   stop-color="#0e1220" stop-opacity="0" />
+        <stop offset="15%"  stop-color="#0e1220" stop-opacity="0.4" />
+        <stop offset="60%"  stop-color="#0e1220" stop-opacity="0.6" />
+        <stop offset="85%"  stop-color="#0e1220" stop-opacity="0.4" />
+        <stop offset="100%" stop-color="#0e1220" stop-opacity="0" />
+      </linearGradient>
+
+      <!-- Berry stroke -->
+      <marker id="none" />
+
+      <!-- Clip for bottom half -->
+      <clipPath id="bottomHalf">
+        <rect x="0" y="460" width="1440" height="440" />
+      </clipPath>
+    </defs>
+
+    <!-- Horizon purple glow band -->
+    <ellipse cx="720" cy="510" rx="680" ry="90" fill="url(#horizonGlow)" />
+
+    <!-- Stars scattered in upper sky -->
+    <g fill="#c8c0d8" opacity="0.55">
+      <circle cx="88"  cy="62"  r="0.8" />
+      <circle cx="142" cy="34"  r="0.6" />
+      <circle cx="209" cy="118" r="0.7" />
+      <circle cx="271" cy="52"  r="0.5" />
+      <circle cx="334" cy="88"  r="0.9" />
+      <circle cx="388" cy="22"  r="0.6" />
+      <circle cx="452" cy="76"  r="0.7" />
+      <circle cx="510" cy="44"  r="0.5" />
+      <circle cx="574" cy="130" r="0.8" />
+      <circle cx="618" cy="18"  r="0.6" />
+      <circle cx="672" cy="96"  r="0.9" />
+      <circle cx="730" cy="38"  r="0.5" />
+      <circle cx="788" cy="112" r="0.7" />
+      <circle cx="844" cy="28"  r="0.8" />
+      <circle cx="912" cy="72"  r="0.6" />
+      <circle cx="968" cy="108" r="0.5" />
+      <circle cx="1024" cy="44" r="0.9" />
+      <circle cx="1082" cy="20" r="0.6" />
+      <circle cx="1138" cy="90" r="0.7" />
+      <circle cx="1194" cy="56" r="0.8" />
+      <circle cx="1248" cy="128" r="0.5" />
+      <circle cx="1302" cy="36" r="0.6" />
+      <circle cx="1358" cy="82" r="0.8" />
+      <circle cx="1412" cy="18" r="0.5" />
+      <circle cx="60"  cy="148" r="0.5" />
+      <circle cx="178" cy="162" r="0.6" />
+      <circle cx="296" cy="174" r="0.5" />
+      <circle cx="422" cy="158" r="0.7" />
+      <circle cx="548" cy="182" r="0.5" />
+      <circle cx="664" cy="166" r="0.6" />
+      <circle cx="796" cy="150" r="0.5" />
+      <circle cx="922" cy="172" r="0.7" />
+      <circle cx="1048" cy="144" r="0.5" />
+      <circle cx="1168" cy="160" r="0.6" />
+      <circle cx="1292" cy="176" r="0.5" />
+      <circle cx="1396" cy="152" r="0.7" />
+    </g>
+
+    <!-- Dimmer stars lower in sky, above horizon -->
+    <g fill="#a090c0" opacity="0.3">
+      <circle cx="112" cy="300" r="0.7" />
+      <circle cx="228" cy="270" r="0.6" />
+      <circle cx="360" cy="320" r="0.5" />
+      <circle cx="480" cy="285" r="0.7" />
+      <circle cx="600" cy="310" r="0.6" />
+      <circle cx="720" cy="275" r="0.5" />
+      <circle cx="840" cy="300" r="0.7" />
+      <circle cx="960" cy="265" r="0.6" />
+      <circle cx="1080" cy="315" r="0.5" />
+      <circle cx="1200" cy="280" r="0.7" />
+      <circle cx="1320" cy="305" r="0.6" />
+      <circle cx="174" cy="380" r="0.5" />
+      <circle cx="314" cy="355" r="0.6" />
+      <circle cx="444" cy="395" r="0.5" />
+      <circle cx="584" cy="368" r="0.7" />
+      <circle cx="724" cy="390" r="0.5" />
+      <circle cx="864" cy="362" r="0.6" />
+      <circle cx="1004" cy="388" r="0.5" />
+      <circle cx="1144" cy="372" r="0.7" />
+      <circle cx="1284" cy="352" r="0.5" />
+    </g>
+
+    <!-- BLUEBERRY FIELD — bottom half -->
+    <!-- Background field mass — farthest layer -->
+    <path fill="#080c12" opacity="0.85"
+      d="M0,720
+         Q60,680 120,700 Q140,665 180,678 Q200,650 240,668
+         Q265,640 300,655 Q325,628 360,645 Q385,618 420,635
+         Q450,610 490,628 Q515,605 555,620 Q580,598 620,615
+         Q648,592 685,608 Q710,585 750,602 Q778,580 815,596
+         Q840,572 880,590 Q908,565 945,582 Q970,558 1010,575
+         Q1038,552 1075,568 Q1100,545 1140,562 Q1165,540 1205,558
+         Q1230,535 1265,550 Q1290,528 1330,545 Q1355,522 1390,538
+         Q1415,518 1440,530
+         L1440,900 L0,900 Z" />
+
+    <!-- Mid layer — main field body -->
+    <path fill="#080c12"
+      d="M0,760
+         Q40,730 85,748 Q105,718 145,735 Q168,705 205,722
+         Q230,692 270,710 Q292,680 332,698 Q356,668 395,686
+         Q420,658 458,675 Q482,648 520,665 Q545,636 583,654
+         Q608,626 645,643 Q670,616 708,634 Q732,606 768,624
+         Q794,595 832,614 Q856,584 893,602 Q918,574 955,592
+         Q980,562 1018,581 Q1042,552 1080,570 Q1104,542 1142,560
+         Q1166,532 1204,550 Q1228,522 1268,540 Q1292,513 1328,530
+         Q1354,505 1392,522 Q1416,500 1440,512
+         L1440,900 L0,900 Z" />
+
+    <!-- Plant group 1 -->
+    <g transform="translate(55, 740)">
+      <path fill="#080c12" d="M0,0 Q-8,-22 -12,-44 Q-4,-38 2,-30 Q6,-50 14,-62 Q18,-48 16,-36 Q24,-56 30,-70 Q32,-54 28,-42 Q38,-60 44,-72 Q46,-56 40,-44 Q50,-62 52,-78 Q56,-60 48,-46 Q58,-64 60,-80 L62,0 Z" />
+      <ellipse cx="-10" cy="-46" rx="9" ry="5" transform="rotate(-30,-10,-46)" fill="#080c12" />
+      <ellipse cx="14"  cy="-64" rx="8" ry="4" transform="rotate(20,14,-64)"  fill="#080c12" />
+      <ellipse cx="32"  cy="-72" rx="10" ry="5" transform="rotate(-15,32,-72)" fill="#080c12" />
+      <ellipse cx="50"  cy="-80" rx="9" ry="5" transform="rotate(10,50,-80)"  fill="#080c12" />
+      <circle cx="-8"  cy="-52" r="4" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="-4"  cy="-48" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="18"  cy="-68" r="3.8" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="22"  cy="-63" r="3" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="36"  cy="-76" r="4" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="54"  cy="-84" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Plant group 2 -->
+    <g transform="translate(155, 760)">
+      <path fill="#080c12" d="M0,0 Q-6,-20 -10,-40 Q2,-32 6,-24 Q8,-46 18,-60 Q20,-46 18,-34 Q26,-52 34,-68 Q36,-52 30,-40 Q40,-60 48,-74 Q48,-58 42,-46 L50,0 Z" />
+      <ellipse cx="-8"  cy="-42" rx="8" ry="4" transform="rotate(-25,-8,-42)" fill="#080c12" />
+      <ellipse cx="18"  cy="-62" rx="9" ry="5" transform="rotate(15,18,-62)"  fill="#080c12" />
+      <ellipse cx="44"  cy="-76" rx="8" ry="4" transform="rotate(-10,44,-76)" fill="#080c12" />
+      <circle cx="-6"  cy="-46" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="20"  cy="-66" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="24"  cy="-62" r="3"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="46"  cy="-80" r="3.8" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Plant group 3 -->
+    <g transform="translate(255, 750)">
+      <path fill="#080c12" d="M0,0 Q-10,-24 -14,-50 Q-4,-42 4,-32 Q4,-54 16,-70 Q20,-54 16,-42 Q28,-64 36,-80 Q38,-62 32,-50 Q44,-70 52,-88 Q54,-68 46,-56 Q58,-76 64,-94 Q66,-72 58,-60 L68,0 Z" />
+      <ellipse cx="-12" cy="-52" rx="10" ry="5" transform="rotate(-30,-12,-52)" fill="#080c12" />
+      <ellipse cx="16"  cy="-72" rx="9"  ry="5" transform="rotate(20,16,-72)"  fill="#080c12" />
+      <ellipse cx="36"  cy="-82" rx="10" ry="5" transform="rotate(-10,36,-82)" fill="#080c12" />
+      <ellipse cx="60"  cy="-96" rx="9"  ry="5" transform="rotate(15,60,-96)"  fill="#080c12" />
+      <circle cx="-10" cy="-58" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="-6"  cy="-54" r="3.2" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="18"  cy="-76" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="38"  cy="-86" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="42"  cy="-82" r="3"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="62"  cy="-100" r="4"  fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Plant group 4 -->
+    <g transform="translate(368, 768)">
+      <path fill="#080c12" d="M0,0 Q-8,-22 -10,-46 Q2,-36 8,-26 Q10,-50 20,-66 Q22,-50 20,-38 Q30,-58 40,-72 Q40,-56 36,-44 Q46,-64 50,-80 L54,0 Z" />
+      <ellipse cx="-8"  cy="-48" rx="9" ry="4" transform="rotate(-20,-8,-48)" fill="#080c12" />
+      <ellipse cx="20"  cy="-68" rx="9" ry="5" transform="rotate(18,20,-68)"  fill="#080c12" />
+      <ellipse cx="46"  cy="-82" rx="8" ry="4" transform="rotate(-8,46,-82)"  fill="#080c12" />
+      <circle cx="-6"  cy="-52" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="22"  cy="-72" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="26"  cy="-68" r="3"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="48"  cy="-86" r="3.8" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Plant group 5 -->
+    <g transform="translate(478, 758)">
+      <path fill="#080c12" d="M0,0 Q-10,-28 -16,-56 Q-4,-46 4,-34 Q6,-58 18,-76 Q22,-58 18,-44 Q30,-66 40,-84 Q42,-66 36,-52 Q48,-72 58,-92 Q60,-72 50,-58 Q62,-80 68,-100 L72,0 Z" />
+      <ellipse cx="-14" cy="-58" rx="10" ry="5" transform="rotate(-28,-14,-58)" fill="#080c12" />
+      <ellipse cx="18"  cy="-78" rx="9"  ry="5" transform="rotate(22,18,-78)"  fill="#080c12" />
+      <ellipse cx="40"  cy="-86" rx="10" ry="5" transform="rotate(-12,40,-86)" fill="#080c12" />
+      <ellipse cx="64"  cy="-102" rx="9" ry="5" transform="rotate(12,64,-102)" fill="#080c12" />
+      <circle cx="-12" cy="-62" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="-8"  cy="-58" r="3.2" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="20"  cy="-82" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="42"  cy="-90" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="46"  cy="-86" r="3"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="66"  cy="-106" r="4"  fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Plant group 6 -->
+    <g transform="translate(590, 765)">
+      <path fill="#080c12" d="M0,0 Q-6,-20 -10,-42 Q2,-34 6,-24 Q8,-46 16,-60 Q18,-46 16,-36 Q24,-54 32,-68 Q34,-54 28,-42 Q38,-60 44,-74 L48,0 Z" />
+      <ellipse cx="-8"  cy="-44" rx="8" ry="4" transform="rotate(-22,-8,-44)"  fill="#080c12" />
+      <ellipse cx="16"  cy="-62" rx="9" ry="5" transform="rotate(16,16,-62)"   fill="#080c12" />
+      <ellipse cx="40"  cy="-76" rx="8" ry="4" transform="rotate(-6,40,-76)"   fill="#080c12" />
+      <circle cx="-6"  cy="-48" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="18"  cy="-66" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="42"  cy="-80" r="3.8" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Plant group 7 -->
+    <g transform="translate(700, 755)">
+      <path fill="#080c12" d="M0,0 Q-10,-26 -14,-54 Q-2,-44 6,-32 Q6,-56 18,-74 Q22,-56 18,-42 Q28,-64 38,-80 Q40,-64 34,-50 Q46,-70 54,-88 Q56,-70 48,-56 Q60,-78 66,-96 L70,0 Z" />
+      <ellipse cx="-12" cy="-56" rx="10" ry="5" transform="rotate(-26,-12,-56)" fill="#080c12" />
+      <ellipse cx="18"  cy="-76" rx="9"  ry="5" transform="rotate(20,18,-76)"   fill="#080c12" />
+      <ellipse cx="38"  cy="-82" rx="10" ry="5" transform="rotate(-10,38,-82)"  fill="#080c12" />
+      <ellipse cx="62"  cy="-98" rx="9"  ry="5" transform="rotate(14,62,-98)"   fill="#080c12" />
+      <circle cx="-10" cy="-60" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="-6"  cy="-56" r="3"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="20"  cy="-80" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="40"  cy="-86" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="44"  cy="-82" r="3"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="64"  cy="-102" r="4"  fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Plant group 8 -->
+    <g transform="translate(820, 762)">
+      <path fill="#080c12" d="M0,0 Q-8,-22 -12,-46 Q0,-38 6,-28 Q8,-50 18,-66 Q20,-50 18,-38 Q28,-58 36,-72 Q38,-56 32,-44 Q42,-62 48,-78 L52,0 Z" />
+      <ellipse cx="-10" cy="-48" rx="9" ry="5" transform="rotate(-24,-10,-48)"  fill="#080c12" />
+      <ellipse cx="18"  cy="-68" rx="9" ry="5" transform="rotate(18,18,-68)"    fill="#080c12" />
+      <ellipse cx="44"  cy="-80" rx="8" ry="4" transform="rotate(-8,44,-80)"    fill="#080c12" />
+      <circle cx="-8"  cy="-52" r="3.8" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="-4"  cy="-48" r="3"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="20"  cy="-72" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="46"  cy="-84" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Plant group 9 -->
+    <g transform="translate(940, 752)">
+      <path fill="#080c12" d="M0,0 Q-10,-28 -16,-58 Q-4,-48 4,-36 Q6,-60 18,-78 Q22,-60 18,-46 Q30,-68 40,-86 Q42,-68 36,-54 Q48,-74 58,-94 Q60,-74 52,-60 Q64,-82 70,-102 L74,0 Z" />
+      <ellipse cx="-14" cy="-60" rx="10" ry="5" transform="rotate(-28,-14,-60)" fill="#080c12" />
+      <ellipse cx="18"  cy="-80" rx="9"  ry="5" transform="rotate(22,18,-80)"   fill="#080c12" />
+      <ellipse cx="40"  cy="-88" rx="10" ry="5" transform="rotate(-12,40,-88)"  fill="#080c12" />
+      <ellipse cx="66"  cy="-104" rx="9" ry="5" transform="rotate(12,66,-104)"  fill="#080c12" />
+      <circle cx="-12" cy="-64" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="-8"  cy="-60" r="3.2" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="20"  cy="-84" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="42"  cy="-92" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="46"  cy="-88" r="3"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="68"  cy="-108" r="4"  fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Plant group 10 -->
+    <g transform="translate(1060, 758)">
+      <path fill="#080c12" d="M0,0 Q-8,-22 -10,-46 Q2,-36 8,-26 Q10,-50 20,-66 Q22,-50 20,-38 Q30,-58 40,-72 Q40,-56 36,-44 Q46,-64 50,-80 L54,0 Z" />
+      <ellipse cx="-8"  cy="-48" rx="9" ry="4" transform="rotate(-20,-8,-48)"  fill="#080c12" />
+      <ellipse cx="20"  cy="-68" rx="9" ry="5" transform="rotate(18,20,-68)"   fill="#080c12" />
+      <ellipse cx="46"  cy="-82" rx="8" ry="4" transform="rotate(-8,46,-82)"   fill="#080c12" />
+      <circle cx="-6"  cy="-52" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="22"  cy="-72" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="26"  cy="-68" r="3"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="48"  cy="-86" r="3.8" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Plant group 11 -->
+    <g transform="translate(1176, 763)">
+      <path fill="#080c12" d="M0,0 Q-10,-26 -14,-54 Q-2,-44 6,-32 Q6,-56 18,-74 Q22,-56 18,-42 Q28,-64 38,-80 Q40,-64 34,-50 Q46,-70 54,-88 L58,0 Z" />
+      <ellipse cx="-12" cy="-56" rx="10" ry="5" transform="rotate(-26,-12,-56)"  fill="#080c12" />
+      <ellipse cx="18"  cy="-76" rx="9"  ry="5" transform="rotate(20,18,-76)"    fill="#080c12" />
+      <ellipse cx="38"  cy="-82" rx="10" ry="5" transform="rotate(-10,38,-82)"   fill="#080c12" />
+      <ellipse cx="50"  cy="-90" rx="8"  ry="4" transform="rotate(12,50,-90)"    fill="#080c12" />
+      <circle cx="-10" cy="-60" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="-6"  cy="-56" r="3"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="20"  cy="-80" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="40"  cy="-86" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="52"  cy="-94" r="3.8" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Plant group 12 -->
+    <g transform="translate(1300, 756)">
+      <path fill="#080c12" d="M0,0 Q-8,-24 -12,-50 Q-2,-40 6,-30 Q6,-54 16,-70 Q20,-54 16,-40 Q26,-62 36,-78 Q38,-60 32,-48 Q42,-68 50,-86 Q52,-66 44,-54 Q56,-74 60,-94 L64,0 Z" />
+      <ellipse cx="-10" cy="-52" rx="10" ry="5" transform="rotate(-26,-10,-52)"  fill="#080c12" />
+      <ellipse cx="16"  cy="-72" rx="9"  ry="5" transform="rotate(20,16,-72)"    fill="#080c12" />
+      <ellipse cx="36"  cy="-80" rx="10" ry="5" transform="rotate(-10,36,-80)"   fill="#080c12" />
+      <ellipse cx="56"  cy="-96" rx="9"  ry="5" transform="rotate(14,56,-96)"    fill="#080c12" />
+      <circle cx="-8"  cy="-56" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="-4"  cy="-52" r="3"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="18"  cy="-76" r="4"   fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="38"  cy="-84" r="3.5" fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+      <circle cx="58"  cy="-100" r="4"  fill="#1e2535" stroke="#2a3348" stroke-width="0.8" />
+    </g>
+
+    <!-- Foreground massing -->
+    <path fill="#080c12"
+      d="M0,840
+         Q30,800 70,818 Q90,790 128,808 Q150,778 188,796
+         Q210,768 248,786 Q272,758 310,776 Q332,748 370,766
+         Q394,736 430,754 Q454,726 492,744 Q516,716 554,734
+         Q578,705 616,723 Q640,695 676,713 Q700,684 738,702
+         Q762,672 800,691 Q824,662 862,680 Q886,652 922,670
+         Q946,642 984,660 Q1008,632 1046,650 Q1070,622 1108,640
+         Q1132,612 1170,630 Q1194,602 1232,620 Q1256,592 1294,610
+         Q1318,582 1356,600 Q1380,574 1414,592 Q1432,570 1440,578
+         L1440,900 L0,900 Z" />
+
+    <!-- Horizon mist layer 1 -->
+    <rect x="0" y="500" width="1440" height="70" fill="url(#mistGrad)" opacity="0.7" rx="0" />
+
+    <!-- Horizon mist layer 2 -->
+    <rect x="0" y="488" width="1440" height="40" fill="url(#mistGrad2)" opacity="0.5" rx="0" />
+
+    <!-- Mid-field mist drift -->
+    <ellipse cx="360"  cy="650" rx="240" ry="22" fill="#12172a" opacity="0.45" />
+    <ellipse cx="820"  cy="640" rx="280" ry="20" fill="#12172a" opacity="0.4" />
+    <ellipse cx="1200" cy="658" rx="200" ry="18" fill="#12172a" opacity="0.38" />
+    <ellipse cx="120"  cy="680" rx="140" ry="16" fill="#0e1220" opacity="0.35" />
+    <ellipse cx="600"  cy="695" rx="200" ry="18" fill="#0e1220" opacity="0.32" />
+    <ellipse cx="1060" cy="682" rx="180" ry="16" fill="#0e1220" opacity="0.3" />
+
+    <!-- Ground fill — bottom solid -->
+    <rect x="0" y="870" width="1440" height="30" fill="#080c12" />
+  </svg>
+</body>
+</html>
